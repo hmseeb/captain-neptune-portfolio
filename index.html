@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Captain Neptune – Premier Underwater Basket Weaving Instructor. Master the art of aquatic basket craft in the deep blue." />
+  <meta name="keywords" content="underwater basket weaving, Captain Neptune, ocean crafts, basket weaving classes, mermaid testimonials" />
+  <meta name="author" content="Captain Neptune" />
+  <meta property="og:title" content="Captain Neptune | Underwater Basket Weaving" />
+  <meta property="og:description" content="Master the ancient art of underwater basket weaving with the legendary Captain Neptune." />
+  <meta property="og:type" content="website" />
+  <title>Captain Neptune | Underwater Basket Weaving</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌊</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav" id="navbar">
+    <div class="nav__container">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-icon">⚓</span>
+        <span class="nav__logo-text">CAPT. NEPTUNE</span>
+      </a>
+      <button class="nav__burger" id="navBurger" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#classes" class="nav__link">Classes</a></li>
+        <li><a href="#gallery" class="nav__link">Gallery</a></li>
+        <li><a href="#testimonials" class="nav__link">Testimonials</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <canvas class="hero__canvas" id="waveCanvas" aria-hidden="true"></canvas>
+    <div class="hero__bubbles" aria-hidden="true">
+      <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+      <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+      <span class="bubble"></span><span class="bubble"></span><span class="bubble"></span>
+      <span class="bubble"></span>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">// EST. 20,000 LEAGUES UNDER THE SEA</p>
+      <h1 class="hero__title">
+        <span class="hero__title-line">CAPTAIN</span>
+        <span class="hero__title-line hero__title-line--accent">NEPTUNE</span>
+      </h1>
+      <p class="hero__subtitle">UNDERWATER BASKET WEAVING<br />INSTRUCTOR &amp; OCEANIC CRAFTSMAN</p>
+      <p class="hero__tagline">Where the currents meet craftsmanship.<br />Where the deep teaches patience.</p>
+      <div class="hero__cta-group">
+        <a href="#classes" class="btn btn--primary">VIEW CLASSES</a>
+        <a href="#gallery" class="btn btn--outline">SEE MY WORK</a>
+      </div>
+    </div>
+    <div class="hero__scroll-indicator" aria-hidden="true">
+      <span>SCROLL DOWN</span>
+      <div class="hero__scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__image-wrapper">
+          <div class="about__image-frame">
+            <div class="about__portrait" aria-label="Captain Neptune portrait">
+              <svg viewBox="0 0 300 350" xmlns="http://www.w3.org/2000/svg" class="about__svg-portrait">
+                <!-- Ocean background -->
+                <rect width="300" height="350" fill="#0a1628"/>
+                <!-- Bubbles -->
+                <circle cx="30" cy="50" r="6" fill="none" stroke="#00f5ff" stroke-width="1.5" opacity="0.5"/>
+                <circle cx="260" cy="80" r="4" fill="none" stroke="#00f5ff" stroke-width="1" opacity="0.4"/>
+                <circle cx="270" cy="30" r="8" fill="none" stroke="#00f5ff" stroke-width="1.5" opacity="0.3"/>
+                <circle cx="20" cy="120" r="5" fill="none" stroke="#00f5ff" stroke-width="1" opacity="0.4"/>
+                <!-- Trident -->
+                <line x1="240" y1="10" x2="240" y2="200" stroke="#00f5ff" stroke-width="3"/>
+                <line x1="225" y1="10" x2="225" y2="50" stroke="#00f5ff" stroke-width="2"/>
+                <line x1="255" y1="10" x2="255" y2="50" stroke="#00f5ff" stroke-width="2"/>
+                <line x1="220" y1="30" x2="260" y2="30" stroke="#00f5ff" stroke-width="1.5" opacity="0.6"/>
+                <!-- Body/Coat -->
+                <ellipse cx="150" cy="260" rx="90" ry="80" fill="#0d2040"/>
+                <rect x="90" y="210" width="120" height="100" fill="#0d2040" rx="5"/>
+                <!-- Coat details -->
+                <line x1="150" y1="215" x2="150" y2="320" stroke="#1a3a6b" stroke-width="2"/>
+                <rect x="125" y="230" width="12" height="8" rx="2" fill="#00f5ff" opacity="0.6"/>
+                <rect x="125" y="248" width="12" height="8" rx="2" fill="#00f5ff" opacity="0.6"/>
+                <rect x="125" y="266" width="12" height="8" rx="2" fill="#00f5ff" opacity="0.6"/>
+                <!-- Shoulders / epaulettes -->
+                <ellipse cx="100" cy="215" rx="22" ry="10" fill="#1a3a6b"/>
+                <ellipse cx="200" cy="215" rx="22" ry="10" fill="#1a3a6b"/>
+                <line x1="83" y1="215" x2="117" y2="215" stroke="#00f5ff" stroke-width="1.5" opacity="0.7"/>
+                <line x1="183" y1="215" x2="217" y2="215" stroke="#00f5ff" stroke-width="1.5" opacity="0.7"/>
+                <!-- Neck -->
+                <rect x="135" y="175" width="30" height="40" fill="#1e4060" rx="5"/>
+                <!-- Head -->
+                <ellipse cx="150" cy="150" rx="55" ry="65" fill="#1e4060"/>
+                <!-- Captain hat -->
+                <rect x="100" y="80" width="100" height="45" rx="4" fill="#0d2040"/>
+                <rect x="90" y="118" width="120" height="12" rx="3" fill="#0d2040"/>
+                <rect x="118" y="68" width="64" height="22" rx="4" fill="#0a1628"/>
+                <text x="150" y="85" text-anchor="middle" font-size="12" fill="#00f5ff" font-family="monospace">⚓</text>
+                <!-- Hat band -->
+                <rect x="100" y="113" width="100" height="5" fill="#00f5ff" opacity="0.7"/>
+                <!-- Eyes -->
+                <ellipse cx="130" cy="148" rx="10" ry="11" fill="#0a1628"/>
+                <ellipse cx="170" cy="148" rx="10" ry="11" fill="#0a1628"/>
+                <circle cx="132" cy="148" r="5" fill="#00f5ff" opacity="0.9"/>
+                <circle cx="172" cy="148" r="5" fill="#00f5ff" opacity="0.9"/>
+                <circle cx="134" cy="146" r="2" fill="white"/>
+                <circle cx="174" cy="146" r="2" fill="white"/>
+                <!-- Beard -->
+                <path d="M105 170 Q150 205 195 170 Q185 210 150 220 Q115 210 105 170Z" fill="#1a3a6b"/>
+                <path d="M120 172 L118 210" stroke="#0d2040" stroke-width="1.5" opacity="0.5"/>
+                <path d="M150 175 L150 220" stroke="#0d2040" stroke-width="1.5" opacity="0.5"/>
+                <path d="M180 172 L182 210" stroke="#0d2040" stroke-width="1.5" opacity="0.5"/>
+                <!-- Mustache -->
+                <path d="M120 165 Q135 158 150 162 Q165 158 180 165" stroke="#00f5ff" stroke-width="2.5" fill="none" opacity="0.8"/>
+                <!-- Seaweed decoration -->
+                <path d="M60 300 Q50 270 60 240 Q70 210 60 180" stroke="#00a86b" stroke-width="3" fill="none" opacity="0.5"/>
+                <path d="M55 250 Q40 240 45 225" stroke="#00a86b" stroke-width="2" fill="none" opacity="0.4"/>
+                <path d="M57 210 Q42 200 47 185" stroke="#00a86b" stroke-width="2" fill="none" opacity="0.4"/>
+                <!-- Basket -->
+                <ellipse cx="80" cy="280" rx="30" ry="12" fill="#8b6914"/>
+                <rect x="50" y="255" width="60" height="30" fill="#a07820" rx="3"/>
+                <line x1="55" y1="255" x2="55" y2="285" stroke="#8b6914" stroke-width="1.5"/>
+                <line x1="65" y1="255" x2="65" y2="285" stroke="#8b6914" stroke-width="1.5"/>
+                <line x1="75" y1="255" x2="75" y2="285" stroke="#8b6914" stroke-width="1.5"/>
+                <line x1="85" y1="255" x2="85" y2="285" stroke="#8b6914" stroke-width="1.5"/>
+                <line x1="95" y1="255" x2="95" y2="285" stroke="#8b6914" stroke-width="1.5"/>
+                <line x1="105" y1="255" x2="105" y2="285" stroke="#8b6914" stroke-width="1.5"/>
+                <line x1="50" y1="262" x2="110" y2="262" stroke="#8b6914" stroke-width="1.5"/>
+                <line x1="50" y1="270" x2="110" y2="270" stroke="#8b6914" stroke-width="1.5"/>
+                <line x1="50" y1="278" x2="110" y2="278" stroke="#8b6914" stroke-width="1.5"/>
+                <!-- Water shimmer at bottom -->
+                <rect x="0" y="330" width="300" height="20" fill="#0a1628" opacity="0.8"/>
+                <path d="M0 330 Q75 320 150 330 Q225 340 300 330 L300 350 L0 350Z" fill="#061020" opacity="0.9"/>
+              </svg>
+            </div>
+          </div>
+          <div class="about__badge">
+            <span class="about__badge-number">30+</span>
+            <span class="about__badge-text">YEARS<br/>SUBMERGED</span>
+          </div>
+        </div>
+        <div class="about__content">
+          <div class="section__label">// ABOUT THE CAPTAIN</div>
+          <h2 class="section__title">MASTER OF<br /><span class="text--accent">THE DEEP CRAFT</span></h2>
+          <p class="about__bio">Born in the storm-swept Azores, raised by tide and current, <strong>Captain Erasmus Neptune</strong> discovered the ancient art of underwater basket weaving at the age of seven, guided by a wise old octopus named Gerald.</p>
+          <p class="about__bio">After three decades beneath the waves — surviving kraken encounters, rogue currents, and the occasional aggressive crab — the Captain has woven over <strong>4,200 baskets</strong> and trained more than <strong>800 students</strong>, including 47 certified mermaids.</p>
+          <p class="about__bio">His technique, known as the <em>"Neptune Spiral Knot"</em>, is recognized internationally as the gold standard of aquatic basket construction.</p>
+          <div class="about__stats">
+            <div class="about__stat">
+              <span class="about__stat-number">4,200<span class="text--accent">+</span></span>
+              <span class="about__stat-label">Baskets Woven</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-number">800<span class="text--accent">+</span></span>
+              <span class="about__stat-label">Students Trained</span>
+            </div>
+            <div class="about__stat">
+              <span class="about__stat-number">47<span class="text--accent">+</span></span>
+              <span class="about__stat-label">Certified Mermaids</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CLASSES ===================== -->
+  <section class="classes section" id="classes">
+    <div class="container">
+      <div class="section__header">
+        <div class="section__label">// CURRICULUM</div>
+        <h2 class="section__title">AVAILABLE <span class="text--accent">CLASSES</span></h2>
+        <p class="section__desc">Whether you're a surface-dweller dipping your toes in or a seasoned deep-sea diver, there's a course for every tide.</p>
+      </div>
+      <div class="classes__grid">
+
+        <article class="class-card">
+          <div class="class-card__badge">BEGINNER</div>
+          <div class="class-card__icon">🐚</div>
+          <h3 class="class-card__title">THE SHORELINE STARTER</h3>
+          <p class="class-card__desc">Learn the fundamental weaves in shallow water (max depth: 3ft). Perfect for landlubbers, nervous swimmers, and those who simply prefer not to encounter Gerald.</p>
+          <ul class="class-card__features">
+            <li>Basic over-under weave technique</li>
+            <li>Seaweed material selection</li>
+            <li>Waterproofing fundamentals</li>
+            <li>4-week intensive course</li>
+          </ul>
+          <div class="class-card__footer">
+            <span class="class-card__price">$299 <span class="class-card__per">/ course</span></span>
+            <a href="#contact" class="btn btn--small btn--primary">ENROLL NOW</a>
+          </div>
+        </article>
+
+        <article class="class-card class-card--featured">
+          <div class="class-card__badge class-card__badge--featured">MOST POPULAR</div>
+          <div class="class-card__icon">🌊</div>
+          <h3 class="class-card__title">THE DEEP DIVE DIPLOMA</h3>
+          <p class="class-card__desc">The full Captain Neptune experience. Master pressure-resistant weaves, tidal rhythm techniques, and the legendary Neptune Spiral Knot at depths up to 60ft.</p>
+          <ul class="class-card__features">
+            <li>All Shoreline Starter content</li>
+            <li>The Neptune Spiral Knot</li>
+            <li>Pressure-resistant materials</li>
+            <li>Tidal rhythm weaving</li>
+            <li>12-week comprehensive course</li>
+            <li>Certificate of Aquatic Craft</li>
+          </ul>
+          <div class="class-card__footer">
+            <span class="class-card__price">$899 <span class="class-card__per">/ course</span></span>
+            <a href="#contact" class="btn btn--small btn--primary">ENROLL NOW</a>
+          </div>
+        </article>
+
+        <article class="class-card">
+          <div class="class-card__badge class-card__badge--advanced">ADVANCED</div>
+          <div class="class-card__icon">🔱</div>
+          <h3 class="class-card__title">THE ABYSS MASTERS</h3>
+          <p class="class-card__desc">For certified graduates only. Bioluminescent night weaving, volcanic vent basket construction, and the secret 7th knot (known only to the Captain and three dolphins).</p>
+          <ul class="class-card__features">
+            <li>Deep-sea night weaving</li>
+            <li>Volcanic vent techniques</li>
+            <li>The Secret 7th Knot™</li>
+            <li>Kraken-encounter protocol</li>
+            <li>8-week elite masterclass</li>
+            <li>Master Craftsman title</li>
+          </ul>
+          <div class="class-card__footer">
+            <span class="class-card__price">$1,499 <span class="class-card__per">/ course</span></span>
+            <a href="#contact" class="btn btn--small btn--primary">ENROLL NOW</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="classes__private">
+        <div class="classes__private-content">
+          <span class="classes__private-icon">🐙</span>
+          <div>
+            <h3 class="classes__private-title">Private &amp; Group Sessions Available</h3>
+            <p class="classes__private-desc">Customized underwater basket weaving experiences for birthdays, bachelorette parties, corporate team-building, and mermaid conventions.</p>
+          </div>
+          <a href="#contact" class="btn btn--outline btn--small">GET A QUOTE</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALLERY ===================== -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section__header">
+        <div class="section__label">// GALLERY</div>
+        <h2 class="section__title">WOVEN FROM THE <span class="text--accent">DEEP</span></h2>
+        <p class="section__desc">A selection of baskets crafted by Captain Neptune and his most distinguished students.</p>
+      </div>
+      <div class="gallery__grid">
+
+        <figure class="gallery__item gallery__item--large">
+          <div class="gallery__img-wrap">
+            <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg" class="gallery__svg">
+              <rect width="600" height="400" fill="#061020"/>
+              <circle cx="300" cy="200" r="180" fill="none" stroke="#0d2040" stroke-width="2"/>
+              <!-- Large oval basket -->
+              <ellipse cx="300" cy="220" rx="180" ry="80" fill="#6b4f12"/>
+              <ellipse cx="300" cy="160" rx="180" ry="80" fill="#7a5a18"/>
+              <!-- Weave pattern vertical -->
+              <line x1="150" y1="130" x2="150" y2="280" stroke="#5a3e08" stroke-width="3"/>
+              <line x1="175" y1="118" x2="175" y2="278" stroke="#5a3e08" stroke-width="3"/>
+              <line x1="200" y1="110" x2="200" y2="278" stroke="#5a3e08" stroke-width="3"/>
+              <line x1="225" y1="105" x2="225" y2="276" stroke="#5a3e08" stroke-width="3"/>
+              <line x1="250" y1="102" x2="250" y2="276" stroke="#5a3e08" stroke-width="3"/>
+              <line x1="275" y1="100" x2="275" y2="276" stroke="#5a3e08" stroke-width="3"/>
+              <line x1="300" y1="100" x2="300" y2="276" stroke="#5a3e08" stroke-width="3"/>
+              <line x1="325" y1="100" x2="325" y2="276" stroke="#5a3e08" stroke-width="3"/>
+              <line x1="350" y1="102" x2="350" y2="276" stroke="#5a3e08" stroke-width="3"/>
+              <line x1="375" y1="105" x2="375" y2="276" stroke="#5a3e08" stroke-width="3"/>
+              <line x1="400" y1="110" x2="400" y2="278" stroke="#5a3e08" stroke-width="3"/>
+              <line x1="425" y1="118" x2="425" y2="278" stroke="#5a3e08" stroke-width="3"/>
+              <line x1="450" y1="130" x2="450" y2="280" stroke="#5a3e08" stroke-width="3"/>
+              <!-- Weave pattern horizontal -->
+              <ellipse cx="300" cy="130" rx="175" ry="25" fill="none" stroke="#8b6914" stroke-width="3"/>
+              <ellipse cx="300" cy="150" rx="177" ry="32" fill="none" stroke="#8b6914" stroke-width="2.5"/>
+              <ellipse cx="300" cy="170" rx="178" ry="38" fill="none" stroke="#8b6914" stroke-width="2.5"/>
+              <ellipse cx="300" cy="190" rx="179" ry="43" fill="none" stroke="#8b6914" stroke-width="2.5"/>
+              <ellipse cx="300" cy="210" rx="180" ry="48" fill="none" stroke="#8b6914" stroke-width="2.5"/>
+              <ellipse cx="300" cy="230" rx="178" ry="48" fill="none" stroke="#8b6914" stroke-width="2.5"/>
+              <ellipse cx="300" cy="250" rx="170" ry="44" fill="none" stroke="#8b6914" stroke-width="2.5"/>
+              <ellipse cx="300" cy="270" rx="150" ry="35" fill="none" stroke="#8b6914" stroke-width="2.5"/>
+              <!-- Cyan accent seaweed -->
+              <path d="M100 350 Q120 300 110 250 Q100 200 120 160" stroke="#00f5ff" stroke-width="2" fill="none" opacity="0.5"/>
+              <path d="M500 350 Q480 300 490 250 Q500 200 480 160" stroke="#00f5ff" stroke-width="2" fill="none" opacity="0.5"/>
+              <!-- Bubbles -->
+              <circle cx="80" cy="100" r="8" fill="none" stroke="#00f5ff" stroke-width="1.5" opacity="0.4"/>
+              <circle cx="520" cy="80" r="5" fill="none" stroke="#00f5ff" stroke-width="1" opacity="0.4"/>
+              <circle cx="550" cy="130" r="10" fill="none" stroke="#00f5ff" stroke-width="1.5" opacity="0.3"/>
+              <text x="300" y="370" text-anchor="middle" font-family="monospace" font-size="11" fill="#00f5ff" opacity="0.6">THE NEPTUNE OVAL — SEAGRASS &amp; KELP</text>
+            </svg>
+          </div>
+          <figcaption class="gallery__caption">
+            <strong>The Neptune Oval</strong> — Seagrass &amp; Kelp, 2024
+          </figcaption>
+        </figure>
+
+        <figure class="gallery__item">
+          <div class="gallery__img-wrap">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="gallery__svg">
+              <rect width="400" height="300" fill="#061020"/>
+              <!-- Round basket -->
+              <circle cx="200" cy="160" r="100" fill="#7a5a18"/>
+              <!-- Spiral weave -->
+              <circle cx="200" cy="160" r="15" fill="none" stroke="#8b6914" stroke-width="3"/>
+              <circle cx="200" cy="160" r="30" fill="none" stroke="#8b6914" stroke-width="3"/>
+              <circle cx="200" cy="160" r="45" fill="none" stroke="#8b6914" stroke-width="3"/>
+              <circle cx="200" cy="160" r="60" fill="none" stroke="#8b6914" stroke-width="3"/>
+              <circle cx="200" cy="160" r="75" fill="none" stroke="#8b6914" stroke-width="3"/>
+              <circle cx="200" cy="160" r="90" fill="none" stroke="#5a3e08" stroke-width="2"/>
+              <!-- Radial lines -->
+              <line x1="200" y1="60" x2="200" y2="260" stroke="#5a3e08" stroke-width="2" opacity="0.6"/>
+              <line x1="100" y1="160" x2="300" y2="160" stroke="#5a3e08" stroke-width="2" opacity="0.6"/>
+              <line x1="129" y1="89" x2="271" y2="231" stroke="#5a3e08" stroke-width="2" opacity="0.6"/>
+              <line x1="271" y1="89" x2="129" y2="231" stroke="#5a3e08" stroke-width="2" opacity="0.6"/>
+              <!-- Glow center -->
+              <circle cx="200" cy="160" r="8" fill="#00f5ff" opacity="0.4"/>
+              <circle cx="200" cy="160" r="4" fill="#00f5ff" opacity="0.7"/>
+              <!-- Bubbles -->
+              <circle cx="50" cy="50" r="6" fill="none" stroke="#00f5ff" stroke-width="1" opacity="0.4"/>
+              <circle cx="350" cy="70" r="4" fill="none" stroke="#00f5ff" stroke-width="1" opacity="0.3"/>
+              <text x="200" y="285" text-anchor="middle" font-family="monospace" font-size="10" fill="#00f5ff" opacity="0.6">SPIRAL BOWL — NEPTUNE SPIRAL KNOT</text>
+            </svg>
+          </div>
+          <figcaption class="gallery__caption">
+            <strong>Spiral Bowl</strong> — Neptune Spiral Knot, 2023
+          </figcaption>
+        </figure>
+
+        <figure class="gallery__item">
+          <div class="gallery__img-wrap">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="gallery__svg">
+              <rect width="400" height="300" fill="#061020"/>
+              <!-- Tall rectangular basket -->
+              <rect x="120" y="60" width="160" height="180" rx="10" fill="#7a5a18"/>
+              <rect x="120" y="60" width="160" height="20" rx="5" fill="#8b6914"/>
+              <!-- Weave pattern -->
+              <line x1="135" y1="60" x2="135" y2="240" stroke="#5a3e08" stroke-width="2.5"/>
+              <line x1="155" y1="60" x2="155" y2="240" stroke="#5a3e08" stroke-width="2.5"/>
+              <line x1="175" y1="60" x2="175" y2="240" stroke="#5a3e08" stroke-width="2.5"/>
+              <line x1="195" y1="60" x2="195" y2="240" stroke="#5a3e08" stroke-width="2.5"/>
+              <line x1="215" y1="60" x2="215" y2="240" stroke="#5a3e08" stroke-width="2.5"/>
+              <line x1="235" y1="60" x2="235" y2="240" stroke="#5a3e08" stroke-width="2.5"/>
+              <line x1="255" y1="60" x2="255" y2="240" stroke="#5a3e08" stroke-width="2.5"/>
+              <line x1="120" y1="90" x2="280" y2="90" stroke="#8b6914" stroke-width="2"/>
+              <line x1="120" y1="110" x2="280" y2="110" stroke="#8b6914" stroke-width="2"/>
+              <line x1="120" y1="130" x2="280" y2="130" stroke="#8b6914" stroke-width="2"/>
+              <line x1="120" y1="150" x2="280" y2="150" stroke="#8b6914" stroke-width="2"/>
+              <line x1="120" y1="170" x2="280" y2="170" stroke="#8b6914" stroke-width="2"/>
+              <line x1="120" y1="190" x2="280" y2="190" stroke="#8b6914" stroke-width="2"/>
+              <line x1="120" y1="210" x2="280" y2="210" stroke="#8b6914" stroke-width="2"/>
+              <line x1="120" y1="230" x2="280" y2="230" stroke="#8b6914" stroke-width="2"/>
+              <!-- Handle -->
+              <path d="M160 60 Q200 20 240 60" stroke="#8b6914" stroke-width="5" fill="none"/>
+              <!-- Bioluminescent dots -->
+              <circle cx="175" cy="100" r="3" fill="#00f5ff" opacity="0.8"/>
+              <circle cx="215" cy="140" r="3" fill="#00f5ff" opacity="0.8"/>
+              <circle cx="195" cy="170" r="3" fill="#00f5ff" opacity="0.8"/>
+              <circle cx="235" cy="110" r="3" fill="#00f5ff" opacity="0.8"/>
+              <circle cx="155" cy="190" r="3" fill="#00f5ff" opacity="0.8"/>
+              <text x="200" y="275" text-anchor="middle" font-family="monospace" font-size="10" fill="#00f5ff" opacity="0.6">TIDE TOTE — BIOLUMINESCENT REED</text>
+            </svg>
+          </div>
+          <figcaption class="gallery__caption">
+            <strong>Tide Tote</strong> — Bioluminescent Reed, 2024
+          </figcaption>
+        </figure>
+
+        <figure class="gallery__item">
+          <div class="gallery__img-wrap">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="gallery__svg">
+              <rect width="400" height="300" fill="#061020"/>
+              <!-- Star/flower shaped basket top -->
+              <path d="M200 80 L215 125 L260 110 L230 145 L260 180 L215 170 L200 215 L185 170 L140 180 L170 145 L140 110 L185 125Z" fill="#7a5a18"/>
+              <!-- Inner weave -->
+              <path d="M200 100 L210 128 L238 120 L222 140 L238 160 L210 155 L200 180 L190 155 L162 160 L178 140 L162 120 L190 128Z" fill="#5a3e08"/>
+              <path d="M200 115 L207 133 L225 127 L215 140 L225 153 L207 149 L200 165 L193 149 L175 153 L185 140 L175 127 L193 133Z" fill="#7a5a18"/>
+              <!-- Center gem -->
+              <circle cx="200" cy="147" r="12" fill="#00f5ff" opacity="0.6"/>
+              <circle cx="200" cy="147" r="6" fill="#00f5ff" opacity="0.9"/>
+              <!-- Starfish decoration -->
+              <path d="M60 200 L65 215 L80 210 L70 222 L75 238 L60 230 L45 238 L50 222 L40 210 L55 215Z" fill="#00a86b" opacity="0.6"/>
+              <!-- Coral -->
+              <path d="M320 250 Q330 220 325 190 Q335 200 340 170 Q345 190 350 180 Q345 220 355 250Z" fill="#1a4a6b" opacity="0.5"/>
+              <text x="200" y="280" text-anchor="middle" font-family="monospace" font-size="10" fill="#00f5ff" opacity="0.6">CORAL STAR — VOLCANIC VENT FIBRES</text>
+            </svg>
+          </div>
+          <figcaption class="gallery__caption">
+            <strong>Coral Star</strong> — Volcanic Vent Fibres, 2023
+          </figcaption>
+        </figure>
+
+        <figure class="gallery__item">
+          <div class="gallery__img-wrap">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="gallery__svg">
+              <rect width="400" height="300" fill="#061020"/>
+              <!-- Fish trap / cylindrical basket -->
+              <ellipse cx="200" cy="90" rx="100" ry="30" fill="#8b6914"/>
+              <rect x="100" y="90" width="200" height="150" fill="#7a5a18"/>
+              <ellipse cx="200" cy="240" rx="100" ry="30" fill="#6b4f12"/>
+              <!-- Vertical weaves -->
+              <line x1="110" y1="90" x2="110" y2="240" stroke="#5a3e08" stroke-width="2.5"/>
+              <line x1="130" y1="88" x2="130" y2="240" stroke="#5a3e08" stroke-width="2.5"/>
+              <line x1="150" y1="86" x2="150" y2="240" stroke="#5a3e08" stroke-width="2.5"/>
+              <line x1="170" y1="84" x2="170" y2="240" stroke="#5a3e08" stroke-width="2.5"/>
+              <line x1="190" y1="83" x2="190" y2="240" stroke="#5a3e08" stroke-width="2.5"/>
+              <line x1="210" y1="83" x2="210" y2="240" stroke="#5a3e08" stroke-width="2.5"/>
+              <line x1="230" y1="84" x2="230" y2="240" stroke="#5a3e08" stroke-width="2.5"/>
+              <line x1="250" y1="86" x2="250" y2="240" stroke="#5a3e08" stroke-width="2.5"/>
+              <line x1="270" y1="88" x2="270" y2="240" stroke="#5a3e08" stroke-width="2.5"/>
+              <line x1="290" y1="90" x2="290" y2="240" stroke="#5a3e08" stroke-width="2.5"/>
+              <!-- Horizontal rings -->
+              <ellipse cx="200" cy="120" rx="100" ry="20" fill="none" stroke="#8b6914" stroke-width="2.5"/>
+              <ellipse cx="200" cy="150" rx="100" ry="20" fill="none" stroke="#8b6914" stroke-width="2.5"/>
+              <ellipse cx="200" cy="180" rx="100" ry="20" fill="none" stroke="#8b6914" stroke-width="2.5"/>
+              <ellipse cx="200" cy="210" rx="100" ry="20" fill="none" stroke="#8b6914" stroke-width="2.5"/>
+              <!-- Fish inside (silhouette) -->
+              <path d="M170 155 Q200 140 230 155 Q210 165 200 162 Q190 165 170 155Z" fill="#00f5ff" opacity="0.3"/>
+              <circle cx="220" cy="153" r="3" fill="#00f5ff" opacity="0.6"/>
+              <!-- Bubbles from top -->
+              <circle cx="200" cy="65" r="5" fill="none" stroke="#00f5ff" stroke-width="1" opacity="0.5"/>
+              <circle cx="215" cy="48" r="3" fill="none" stroke="#00f5ff" stroke-width="1" opacity="0.4"/>
+              <circle cx="195" cy="35" r="4" fill="none" stroke="#00f5ff" stroke-width="1" opacity="0.3"/>
+              <text x="200" y="285" text-anchor="middle" font-family="monospace" font-size="10" fill="#00f5ff" opacity="0.6">FISH TRAP CLASSIC — POSEIDON REED</text>
+            </svg>
+          </div>
+          <figcaption class="gallery__caption">
+            <strong>Fish Trap Classic</strong> — Poseidon Reed, 2022
+          </figcaption>
+        </figure>
+
+        <figure class="gallery__item">
+          <div class="gallery__img-wrap">
+            <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="gallery__svg">
+              <rect width="400" height="300" fill="#061020"/>
+              <!-- Hexagonal basket -->
+              <polygon points="200,60 265,97 265,173 200,210 135,173 135,97" fill="#7a5a18"/>
+              <!-- Inner hex -->
+              <polygon points="200,85 248,112 248,165 200,192 152,165 152,112" fill="#5a3e08"/>
+              <!-- Weave lines -->
+              <polygon points="200,100 238,122 238,165 200,185 162,165 162,122" fill="none" stroke="#8b6914" stroke-width="2"/>
+              <polygon points="200,112 228,128 228,162 200,178 172,162 172,128" fill="none" stroke="#8b6914" stroke-width="2"/>
+              <polygon points="200,124 218,134 218,158 200,168 182,158 182,134" fill="none" stroke="#8b6914" stroke-width="2"/>
+              <polygon points="200,136 208,141 208,154 200,160 192,154 192,141" fill="none" stroke="#8b6914" stroke-width="2"/>
+              <!-- Radial weave spokes -->
+              <line x1="200" y1="60" x2="200" y2="210" stroke="#5a3e08" stroke-width="1.5" opacity="0.5"/>
+              <line x1="135" y1="97" x2="265" y2="173" stroke="#5a3e08" stroke-width="1.5" opacity="0.5"/>
+              <line x1="265" y1="97" x2="135" y2="173" stroke="#5a3e08" stroke-width="1.5" opacity="0.5"/>
+              <!-- Glowing center -->
+              <circle cx="200" cy="147" r="18" fill="#00f5ff" opacity="0.15"/>
+              <circle cx="200" cy="147" r="10" fill="#00f5ff" opacity="0.25"/>
+              <circle cx="200" cy="147" r="4" fill="#00f5ff" opacity="0.8"/>
+              <!-- Seaweed accents -->
+              <path d="M50 280 Q70 240 60 200 Q50 160 65 130" stroke="#00a86b" stroke-width="2" fill="none" opacity="0.4"/>
+              <path d="M350 280 Q330 240 340 200 Q350 160 335 130" stroke="#00a86b" stroke-width="2" fill="none" opacity="0.4"/>
+              <text x="200" y="245" text-anchor="middle" font-family="monospace" font-size="10" fill="#00f5ff" opacity="0.6">ABYSS HEXAGON — NIGHT WEAVE</text>
+            </svg>
+          </div>
+          <figcaption class="gallery__caption">
+            <strong>Abyss Hexagon</strong> — Night Weave Collection, 2024
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="testimonials section" id="testimonials">
+    <div class="container">
+      <div class="section__header">
+        <div class="section__label">// TESTIMONIALS</div>
+        <h2 class="section__title">WORDS FROM THE <span class="text--accent">DEPTHS</span></h2>
+        <p class="section__desc">Don't take our word for it. Here's what our satisfied mermaids and aquatic students have to say.</p>
+      </div>
+      <div class="testimonials__grid">
+
+        <blockquote class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"Before Captain Neptune, my basket attempts always unravelled in the current. His Neptune Spiral Knot changed EVERYTHING. I can now carry 40 sea urchins hands-free. My tail is free at last."</p>
+          <footer class="testimonial-card__footer">
+            <div class="testimonial-card__avatar">🧜‍♀️</div>
+            <div class="testimonial-card__info">
+              <strong class="testimonial-card__name">Marina Coralsworth</strong>
+              <span class="testimonial-card__role">Mermaid, Pacific Reef District</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial-card testimonial-card--featured">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"I was skeptical. I'm a 400-year-old sea witch — what could a human teach me? Turns out: everything. The volcanic vent technique has revolutionized my potion ingredient storage. Five barnacles out of five."</p>
+          <footer class="testimonial-card__footer">
+            <div class="testimonial-card__avatar">🧙‍♀️</div>
+            <div class="testimonial-card__info">
+              <strong class="testimonial-card__name">Ursula Von Darkwater</strong>
+              <span class="testimonial-card__role">Sea Witch, Abyssal Trench</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"The Deep Dive Diploma was worth every doubloon. Captain Neptune is patient, knowledgeable, and survived the Great Kraken Incident of 2019 with grace. His scars tell a story every stitch."</p>
+          <footer class="testimonial-card__footer">
+            <div class="testimonial-card__avatar">🧜‍♂️</div>
+            <div class="testimonial-card__info">
+              <strong class="testimonial-card__name">Finn Seaborn</strong>
+              <span class="testimonial-card__role">Merman, Northern Coral Sea</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"As a professional pearl collector, I needed baskets that could withstand 200+ atmosphere pressure. Captain Neptune's Abyss Masters course delivered beyond expectations. My pearls have never been safer."</p>
+          <footer class="testimonial-card__footer">
+            <div class="testimonial-card__avatar">🧜‍♀️</div>
+            <div class="testimonial-card__info">
+              <strong class="testimonial-card__name">Pearl Deepwater</strong>
+              <span class="testimonial-card__role">Pearl Collector, Mariana Shelf</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"I took the Shoreline Starter and couldn't stop. Two courses later, I'm a certified Deep Dive graduate. The Captain's passion is infectious. Even Gerald the octopus approved of my weaving."</p>
+          <footer class="testimonial-card__footer">
+            <div class="testimonial-card__avatar">🧜‍♀️</div>
+            <div class="testimonial-card__info">
+              <strong class="testimonial-card__name">Coral Waveheart</strong>
+              <span class="testimonial-card__role">Amateur Weaver, Shallow Cove</span>
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial-card">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"Our pod took the group session for our annual solstice gathering. Captain Neptune arrived 40 minutes late riding a sea turtle, but the session was phenomenal. Would absolutely recommend."</p>
+          <footer class="testimonial-card__footer">
+            <div class="testimonial-card__avatar">🐬</div>
+            <div class="testimonial-card__info">
+              <strong class="testimonial-card__name">Pod Leader Splash</strong>
+              <span class="testimonial-card__role">Dolphin Collective, Azores</span>
+            </div>
+          </footer>
+        </blockquote>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact__grid">
+        <div class="contact__info">
+          <div class="section__label">// CONTACT</div>
+          <h2 class="section__title">SEND A <span class="text--accent">MESSAGE</span><br />IN A BOTTLE</h2>
+          <p class="contact__desc">Whether you're ready to enroll, have questions about depth requirements, or just want to chat about seagrass varieties — the Captain is listening.</p>
+          <div class="contact__details">
+            <div class="contact__detail">
+              <span class="contact__detail-icon">📍</span>
+              <div>
+                <strong>Location</strong>
+                <span>Underwater Studio #7, Coral Reef Complex<br/>20,000 Leagues Under the Atlantic</span>
+              </div>
+            </div>
+            <div class="contact__detail">
+              <span class="contact__detail-icon">🐚</span>
+              <div>
+                <strong>Conch Shell Line</strong>
+                <span>+1 (800) SEA-WEAV</span>
+              </div>
+            </div>
+            <div class="contact__detail">
+              <span class="contact__detail-icon">🦑</span>
+              <div>
+                <strong>Ink-Mail</strong>
+                <span>captain@deepweavers.ocean</span>
+              </div>
+            </div>
+            <div class="contact__detail">
+              <span class="contact__detail-icon">🌊</span>
+              <div>
+                <strong>Office Hours</strong>
+                <span>High Tide: Mon–Fri, 9AM–5PM<br/>Low Tide: By appointment only</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__form-wrapper">
+          <form class="contact__form" id="contactForm" novalidate>
+            <div class="form__group">
+              <label class="form__label" for="name">Your Name <span class="form__required">*</span></label>
+              <input class="form__input" type="text" id="name" name="name" placeholder="e.g. Marina Coralsworth" required autocomplete="name" />
+              <span class="form__error" id="nameError"></span>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="email">Email / Conch Address <span class="form__required">*</span></label>
+              <input class="form__input" type="email" id="email" name="email" placeholder="you@undersea.ocean" required autocomplete="email" />
+              <span class="form__error" id="emailError"></span>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="course">Interested Course</label>
+              <select class="form__input form__select" id="course" name="course">
+                <option value="">-- Select a course --</option>
+                <option value="shoreline">The Shoreline Starter ($299)</option>
+                <option value="deep-dive">The Deep Dive Diploma ($899)</option>
+                <option value="abyss">The Abyss Masters ($1,499)</option>
+                <option value="private">Private / Group Session</option>
+                <option value="other">Just saying hello 🐠</option>
+              </select>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="depth">Current Diving Depth</label>
+              <select class="form__input form__select" id="depth" name="depth">
+                <option value="">-- Select depth level --</option>
+                <option value="surface">Surface (I own a snorkel)</option>
+                <option value="shallow">Shallow (0–30ft)</option>
+                <option value="mid">Mid-water (30–100ft)</option>
+                <option value="deep">Deep (100ft+)</option>
+                <option value="mermaid">I am a mermaid / do not require equipment</option>
+              </select>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="message">Message <span class="form__required">*</span></label>
+              <textarea class="form__input form__textarea" id="message" name="message" placeholder="Tell the Captain why you seek the ancient art of underwater basket weaving..." rows="5" required></textarea>
+              <span class="form__error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">
+              <span class="btn__text">CAST YOUR MESSAGE</span>
+              <span class="btn__icon">🌊</span>
+            </button>
+            <div class="form__success" id="formSuccess" role="alert" aria-live="polite">
+              <span>🐠</span>
+              <p>Your message has been cast into the deep! Captain Neptune will respond within one tidal cycle (24–48 hours).</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <span class="footer__logo-icon">⚓</span>
+            <span class="footer__logo-text">CAPTAIN NEPTUNE</span>
+          </div>
+          <p class="footer__tagline">Master of the Deep Craft.<br/>Weaving the Tides Since 1994.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="SeaStagram">🐟</a>
+            <a href="#" class="footer__social-link" aria-label="DeepTok">🌊</a>
+            <a href="#" class="footer__social-link" aria-label="OceanIn">🦀</a>
+            <a href="#" class="footer__social-link" aria-label="Kraken X">🐙</a>
+          </div>
+        </div>
+        <div class="footer__nav">
+          <h4 class="footer__nav-title">NAVIGATION</h4>
+          <ul class="footer__nav-list">
+            <li><a href="#about">About the Captain</a></li>
+            <li><a href="#classes">Classes &amp; Pricing</a></li>
+            <li><a href="#gallery">Basket Gallery</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav">
+          <h4 class="footer__nav-title">COURSES</h4>
+          <ul class="footer__nav-list">
+            <li><a href="#classes">Shoreline Starter</a></li>
+            <li><a href="#classes">Deep Dive Diploma</a></li>
+            <li><a href="#classes">Abyss Masters</a></li>
+            <li><a href="#contact">Private Sessions</a></li>
+            <li><a href="#contact">Group Bookings</a></li>
+          </ul>
+        </div>
+        <div class="footer__nav">
+          <h4 class="footer__nav-title">CERTIFICATIONS</h4>
+          <ul class="footer__nav-list">
+            <li>🏅 PADI Weaving Certified</li>
+            <li>🏅 Aquatic Craft Guild</li>
+            <li>🏅 Mermaid Council Approved</li>
+            <li>🏅 Kraken Safety Certified</li>
+            <li>🏅 Gerald's Seal of Approval</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2024 Captain Neptune Underwater Basket Weaving. All rights reserved. No krakens were harmed in the making of these baskets.</p>
+        <p class="footer__legal">
+          <a href="#">Privacy Policy</a> ·
+          <a href="#">Terms of Service</a> ·
+          <a href="#">Kraken Liability Waiver</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
